@@ -1,0 +1,16 @@
+.animate_rects_container
+  .rect
+    opacity: 0
+    animation: rect_animation 1s infinite alternate
+
+@for $i from 1 through 3
+  .animate_rects_container
+    .rect
+      &.n#{$i}
+        animation-delay: calc(#{$i} * 0.4s)
+
+@keyframes rect_animation
+  0%
+    opacity: 0
+  100%
+    opacity: 1

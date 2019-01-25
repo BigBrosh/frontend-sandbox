@@ -1,0 +1,19 @@
+@import "../constants"
+$svg_margin: 10px
+$svg_side: 100px
+$slides_per_row: 3
+
+.svg_container
+  display: flex
+  width: 100%
+  max-width: ($slides_per_row * $svg_side) + ($svg_margin * $slides_per_row * 2)
+  flex-flow: row wrap
+  margin: 0 auto
+  svg
+    height: $svg_side
+    width: $svg_side
+    margin: $svg_margin
+    border: 1px solid $main_color
+
+@import "animate_rect"
+@import "loader"
